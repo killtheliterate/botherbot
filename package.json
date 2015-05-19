@@ -1,0 +1,19 @@
+{
+  "name": "botherbot",
+  "version": "1.0.0",
+  "description": "A service that will bug you until you do the thing",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killtheliterate/botherbot.git"
+  },
+  "author": "",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/killtheliterate/botherbot/issues"
+  },
+  "homepage": "https://github.com/killtheliterate/botherbot#readme"
+}
