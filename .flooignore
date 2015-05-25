@@ -6,3 +6,9 @@ extern/
 node_modules/
 tmp
 vendor/
+node_modules
+npm-debug.log
+config/*.json
+!config/*.example.json
+.DS_Store
+bothers/*

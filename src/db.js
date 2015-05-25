@@ -1,3 +1,5 @@
 import PouchDB from 'pouchdb'
 
-const db = new PouchDB('my_database')
+const db = new PouchDB('bothers')
+
+export default db
