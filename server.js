@@ -1,14 +1,47 @@
 import http from 'http'
 import Router from 'router'
 import finalHandler from 'finalhandler'
-import finalHandler from 'finalhandler'
+// import bodyParser from 'body-parser'
+import body from 'body/form'
+// import config from './config/twilio'
+
+// Parse
+// ---------------------------------------------------------------------------
+
+function parseBody (req, res, next) {
+  body(req, function (err, body) {
+    if (err) {
+      error('err:', err)
+      req.body = null
+      return next()
+    }
+    req.body = body
+    next()
+  })
+}
 
 // Routes
 // ---------------------------------------------------------------------------
 
 const router = new Router()
 
-router.get('/')
+router.post('/inbound', parseBody, function(req, res) {
+  // let {sid, token} = config
+  // let client = require('twilio')(sid, token);
+  console.log(req.body)
+
+  // res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+  // res.end('Hello World!')
+})
+
+// router.post('/fallback', function() {
+//   let {sid, token} = config
+//   let client = require('twilio')(sid, token);
+
+//   res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+//   res.end('Hello World!')
+// })
+
 
 // Server
 // ---------------------------------------------------------------------------

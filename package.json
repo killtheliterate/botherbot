@@ -19,8 +19,10 @@
   "homepage": "https://github.com/killtheliterate/botherbot#readme",
   "dependencies": {
     "babel": "^5.4.3",
+    "body": "^5.0.0",
     "debug": "^2.2.0",
     "finalhandler": "^0.3.6",
+    "pouchdb": "^3.5.0",
     "ramda": "^0.14.0",
     "router": "^1.1.0",
     "twilio": "^2.2.0"
