@@ -1,5 +1,9 @@
 import PouchDB from 'pouchdb'
+import pouchdbFind from 'pouchdb-find'
 
-const db = new PouchDB('bothers')
+PouchDB.plugin(pouchdbFind)
+PouchDB.debug.enable('pouchdb:find')
 
-export default db
+const database = new PouchDB('database/bothers')
+
+export default database

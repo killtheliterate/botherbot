@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+require('babel/register')
+var query = require('../run/query')
+
+console.log('dispatching...')
+
+query();

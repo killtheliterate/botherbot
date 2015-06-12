@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+require('babel/register')
+
+var child = require('child_process')
+var server = require('../run/server')
+var port = 8080
+
+server.listen(port, function () {
+  console.log('botherbot... booting... booting... bothering on port %s', port)
+  startDispatch()
+})
+
+function startDispatch () {
+  setInterval(function() {
+    child.exec('bin/dispatch', function(error, stdout, stderr) {
+
+      if (stdout) {
+        console.log('stdout: ', stdout);
+      }
+
+      if (stderr) {
+        console.log('stderr: ', stderr);
+      }
+
+      if (error !== null) {
+        console.log('exec error: ', error);
+      }
+    })
+  }, 1000 * 10)
+}

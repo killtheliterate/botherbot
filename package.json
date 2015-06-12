@@ -2,11 +2,11 @@
   "name": "botherbot",
   "version": "1.0.0",
   "description": "A service that will bug you until you do the thing",
-  "main": "bin/boot",
+  "main": "bin/schedule",
   "scripts": {
-    "start": "./bin/boot",
+    "start": "./bin/schedule",
     "test": "./node_modules/.bin/standard; ./node_modules/.bin/mocha test",
-    "watch": "./node_modules/.bin/nodemon bin/boot"
+    "watch": "./node_modules/.bin/nodemon bin/schedule"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
     "debug": "^2.2.0",
     "finalhandler": "^0.3.6",
     "pouchdb": "^3.5.0",
+    "pouchdb-collate": "^1.2.0",
+    "pouchdb-find": "^0.3.4",
     "ramda": "^0.14.0",
     "router": "^1.1.0",
     "twilio": "^2.2.0"
