@@ -16,4 +16,4 @@ Test:
 $ npm test
 ```
 
-(A Twilio API tutorial)[http://bit.ly/1Fn4uVR]
+[A Twilio API tutorial](http://bit.ly/1Fn4uVR)
