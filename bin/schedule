@@ -2,8 +2,8 @@
 
 require('babel/register')
 
-var child = require('child_process')
 var server = require('../run/server')
+var query = require('../run/query')
 var port = 8080
 
 server.listen(port, function () {
@@ -12,20 +12,5 @@ server.listen(port, function () {
 })
 
 function startDispatch () {
-  setInterval(function() {
-    child.exec('bin/dispatch', function(error, stdout, stderr) {
-
-      if (stdout) {
-        console.log('stdout: ', stdout);
-      }
-
-      if (stderr) {
-        console.log('stderr: ', stderr);
-      }
-
-      if (error !== null) {
-        console.log('exec error: ', error);
-      }
-    })
-  }, 1000 * 10)
+  setInterval(query, 1000 * 10)
 }

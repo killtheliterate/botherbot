@@ -1,6 +1,7 @@
 import db from '../src/db'
+import debug from 'debug'
 
-// pouchdb-find is blowing up
+const log = debug('botherbot:query')
 
 db.createIndex({
   index: {
@@ -8,22 +9,19 @@ db.createIndex({
     name: 'when'
   }
 }).catch(function(err) {
-  console.log(err)
+  log(err)
 })
 
 function query() {
   let now = Date.now()
-
-  console.log('running query')
 
   db.find({
     selector: {
       when: {$lt: now}
     }
   }).then(function (res) {
-    console.log(res)
   }).catch(function (err) {
-    console.log(err)
+    log(err)
   })
 }
 

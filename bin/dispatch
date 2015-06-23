@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// defunct
+
 require('babel/register')
 var query = require('../run/query')
 
