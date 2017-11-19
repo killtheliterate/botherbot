@@ -1,4 +1,6 @@
 # botherbot
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/killtheliterate/botherbot.svg)](https://greenkeeper.io/)
 A robot thing that will bug you until you do the thing.
 
 Start:
